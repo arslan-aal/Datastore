@@ -17,14 +17,14 @@ app.get("/api/health", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("MongoDB connected successfully!");
-  })
-  .catch((error) => {
-    console.error("MongoDB connection error:", error.message);
-  });
+// mongoose
+//   .connect(process.env.MONGO_URI)
+//   .then(() => {
+//     console.log("MongoDB connected successfully!");
+//   })
+//   .catch((error) => {
+//     console.error("MongoDB connection error:", error.message);
+//   });
 
 
   
@@ -68,6 +68,22 @@ app.post("/api/messages", async (req, res) => {
 
 
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+async function startServer() {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB connected successfully!");
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Server startup error:", error.message);
+    process.exit(1);
+  }
+}
+
+startServer();
