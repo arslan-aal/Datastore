@@ -1,0 +1,712 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #111936;
+}
+
+.shop-page {
+  background: #fff;
+  overflow: hidden;
+}
+
+.shop-navbar {
+  height: 82px;
+  padding: 0 7.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #edf0fa;
+}
+
+.shop-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111936;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.logo-icon {
+  font-size: 30px;
+}
+
+.shop-logo small {
+  display: block;
+  margin-top: 3px;
+  color: #64708e;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.shop-nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.shop-nav-links a,
+.nav-contact {
+  text-decoration: none;
+  color: #29334f;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.shop-nav-links a:hover,
+.nav-contact:hover {
+  color: #5145f5;
+}
+
+.nav-contact {
+  padding: 12px 18px;
+  border: 1px solid #dedbff;
+  border-radius: 12px;
+  color: #5145f5;
+}
+
+.nav-contact span {
+  margin-left: 6px;
+}
+
+.shop-hero {
+  min-height: 510px;
+  padding: 65px 7.5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(120deg, #f7f8ff, #eef0ff 55%, #f8f7ff);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: #5145f5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  margin: 20px 0;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.hero-content h1 span,
+.contact-info h2 span,
+.about-section h2 span {
+  color: #5145f5;
+}
+
+.hero-content > p {
+  max-width: 460px;
+  color: #596581;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 28px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 22px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-btn {
+  background: #5145f5;
+  color: white;
+  box-shadow: 0 8px 20px #5145f530;
+}
+
+.primary-btn span {
+  margin-left: 12px;
+}
+
+.secondary-btn {
+  color: #5145f5;
+  background: white;
+  border: 1px solid #e4e2ff;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 35px;
+  color: #596581;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle {
+  position: absolute;
+  width: min(350px, 90%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #e2e2ff, #d5dcff);
+}
+
+.product-showcase {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.product {
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #fff;
+  border-radius: 25px;
+  box-shadow: 0 20px 50px #35407d16;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+.product-laptop {
+  width: 190px;
+  height: 150px;
+  font-size: 78px;
+}
+
+.product-headphone {
+  width: 100px;
+  height: 110px;
+  font-size: 55px;
+}
+
+.product-phone {
+  width: 90px;
+  height: 125px;
+  font-size: 53px;
+}
+
+.product-watch,
+.product-box {
+  width: 90px;
+  height: 85px;
+  font-size: 45px;
+}
+
+.floating-tag {
+  position: absolute;
+  z-index: 2;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: white;
+  color: #34305f;
+  box-shadow: 0 10px 30px #35407d16;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tag-top {
+  top: 12px;
+  right: 0;
+}
+
+.tag-bottom {
+  bottom: 3px;
+  left: 8px;
+}
+
+.tag-bottom span {
+  color: #5145f5;
+}
+
+.benefits-section {
+  padding: 30px 7.5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  border-bottom: 1px solid #f0f1f7;
+}
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #f0f1fa;
+  border-radius: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #232c5010;
+}
+
+.benefit-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0efff;
+  font-size: 23px;
+}
+
+.benefit-card h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: #78819a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 75px 20px;
+  text-align: center;
+  background: #fafaff;
+}
+
+.about-section h2 {
+  margin: 15px 0;
+  font-size: clamp(25px, 4vw, 38px);
+  letter-spacing: -1px;
+}
+
+.about-section > p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #68738d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.contact-section {
+  padding: 90px 7.5%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: start;
+  background: linear-gradient(140deg, #fff, #f8f8ff);
+}
+
+.contact-info h2 {
+  margin: 18px 0;
+  font-size: clamp(34px, 4vw, 49px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.contact-description {
+  max-width: 390px;
+  color: #68738d;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.detail-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: #5145f5;
+  background: #eeedff;
+  font-size: 23px;
+}
+
+.contact-detail h4 {
+  margin: 0 0 5px;
+  font-size: 13px;
+}
+
+.contact-detail p {
+  margin: 0;
+  color: #76809a;
+  font-size: 12px;
+}
+
+.support-note {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: 360px;
+  margin-top: 30px;
+  padding: 16px;
+  border: 1px solid #eae8ff;
+  border-radius: 14px;
+  background: #f5f4ff;
+}
+
+.support-note span {
+  font-size: 22px;
+}
+
+.support-note p {
+  margin: 0;
+  color: #4c4b70;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contact-form-card {
+  padding: 32px;
+  border: 1px solid #eeeff8;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 20px 60px #25305b0d;
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.form-heading h3 {
+  margin: 9px 0 0;
+  font-size: 23px;
+  letter-spacing: -0.7px;
+}
+
+.form-heading-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #eeedff;
+  color: #5145f5;
+  font-size: 23px;
+}
+
+.contact-form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-card label {
+  margin: 15px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #303955;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #e4e7f1;
+  border-radius: 10px;
+  background: #fcfcff;
+  color: #111936;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  border-color: #8178ff;
+  box-shadow: 0 0 0 3px #5145f51a;
+}
+
+.contact-form-card input::placeholder,
+.contact-form-card textarea::placeholder {
+  color: #a1a9bd;
+}
+
+.contact-form-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.send-message-btn {
+  margin-top: 22px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #5145f5;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px #5145f526;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.send-message-btn:hover {
+  background: #4035dc;
+  transform: translateY(-2px);
+}
+
+.send-message-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-status {
+  margin: 15px 0 0;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f1f0ff;
+  color: #4338ca;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.privacy-note {
+  margin: 16px 0 0;
+  color: #8991a6;
+  text-align: center;
+  font-size: 10px;
+}
+
+.shop-footer {
+  padding: 40px 7.5% 0;
+  background: #111936;
+  color: white;
+  text-align: center;
+}
+
+.footer-logo {
+  justify-content: center;
+  color: white;
+}
+
+.footer-logo small {
+  color: #b7bfd5;
+}
+
+.shop-footer > p {
+  margin: 15px 0;
+  color: #b7bfd5;
+  font-size: 12px;
+}
+
+.shop-footer > a:not(.shop-logo) {
+  display: inline-block;
+  margin: 8px 0 28px;
+  color: #c6c0ff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  border-top: 1px solid #ffffff1a;
+  color: #aeb7cf;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .shop-navbar {
+    padding: 0 5%;
+  }
+
+  .shop-nav-links {
+    gap: 16px;
+  }
+
+  .shop-hero {
+    padding: 55px 5%;
+  }
+
+  .contact-section {
+    padding: 65px 5%;
+    gap: 35px;
+  }
+
+  .benefits-section {
+    padding: 25px 5%;
+    gap: 10px;
+  }
+
+  .benefit-card {
+    padding: 12px;
+  }
+
+  .contact-form-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .shop-navbar {
+    height: auto;
+    min-height: 75px;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+  }
+
+  .shop-logo {
+    font-size: 20px;
+  }
+
+  .shop-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .shop-nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-contact {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .shop-hero {
+    grid-template-columns: 1fr;
+    padding: 48px 6% 40px;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 47px;
+    letter-spacing: -2px;
+  }
+
+  .hero-visual {
+    min-height: 310px;
+  }
+
+  .product-showcase {
+    min-height: 260px;
+  }
+
+  .product-laptop {
+    width: 145px;
+    height: 115px;
+    font-size: 60px;
+  }
+
+  .product-headphone {
+    width: 78px;
+    height: 90px;
+    font-size: 42px;
+  }
+
+  .product-phone {
+    width: 72px;
+    height: 100px;
+    font-size: 40px;
+  }
+
+  .product-watch,
+  .product-box {
+    width: 70px;
+    height: 65px;
+    font-size: 34px;
+  }
+
+  .tag-top {
+    right: 0;
+  }
+
+  .benefits-section {
+    grid-template-columns: 1fr;
+    padding: 22px 6%;
+  }
+
+  .benefit-card {
+    padding: 15px;
+  }
+
+  .about-section {
+    padding: 55px 7%;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 39px;
+  }
+
+  .contact-form-card {
+    padding: 22px;
+    border-radius: 17px;
+  }
+
+  .form-heading h3 {
+    font-size: 20px;
+  }
+
+  .shop-footer {
+    padding: 35px 6% 0;
+  }
+}
