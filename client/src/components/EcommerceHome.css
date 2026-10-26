@@ -710,3 +710,126 @@ body {
     padding: 35px 6% 0;
   }
 }
+
+
+
+/* Shared navbar styling for both screens */
+.shop-navbar,
+.catalog-navbar {
+  width: 100%;
+  min-height: 82px;
+  height: 82px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #fff;
+  border-bottom: 1px solid #edf0fa;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.shop-logo,
+.catalog-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #111936;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.logo-icon,
+.catalog-logo > span:first-child {
+  font-size: 30px;
+}
+
+.shop-logo small,
+.catalog-logo small {
+  display: block;
+  margin-top: 3px;
+  color: #64708e;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.shop-nav-links,
+.catalog-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.shop-nav-links a,
+.catalog-links a {
+  padding: 10px 0;
+  color: #29334f;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+.shop-nav-links a:hover,
+.catalog-links a:hover,
+.catalog-links a.selected {
+  color: #5145f5;
+}
+
+.catalog-links a.selected {
+  border-bottom-color: #5145f5;
+}
+
+.nav-contact {
+  padding: 12px 18px;
+  border: 1px solid #dedbff;
+  border-radius: 12px;
+  color: #5145f5;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .shop-navbar,
+  .catalog-navbar {
+    padding: 0 5%;
+    gap: 16px;
+  }
+
+  .shop-nav-links,
+  .catalog-links {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .shop-navbar,
+  .catalog-navbar {
+    height: auto;
+    min-height: 75px;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+  }
+
+  .shop-nav-links,
+  .catalog-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .shop-nav-links a,
+  .catalog-links a {
+    font-size: 12px;
+  }
+
+  .shop-logo,
+  .catalog-logo {
+    font-size: 20px;
+  }
+}

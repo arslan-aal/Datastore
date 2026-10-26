@@ -2,8 +2,10 @@
 import { useState } from "react";
 import axios from "axios";
 import "./EcommerceHome.css";
+import ShopPage from "./ShopPage";
 
 export default function EcommerceHome() {
+  const [currentPage, setCurrentPage] = useState("home");//
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -45,7 +47,9 @@ export default function EcommerceHome() {
       setLoading(false);
     }
   }
-
+if (currentPage === "shop") {
+  return <ShopPage onHome={() => setCurrentPage("home")} />;
+}///
   return (
     <div className="shop-page">
       <header className="shop-navbar">
@@ -59,7 +63,15 @@ export default function EcommerceHome() {
 
         <nav className="shop-nav-links">
           <a href="#home">Home</a>
-          <a href="#benefits">Benefits</a>
+           <a
+    href="#products"
+    onClick={(e) => {
+      e.preventDefault();
+      setCurrentPage("shop");
+    }}
+  >
+    Shop
+  </a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
